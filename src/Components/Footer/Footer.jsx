@@ -9,12 +9,12 @@ const Footer = () => {
   return (
     <div className="w-full bg-[#e9eff2] pt-10 py-16">
       <div className="py-8 max-w-screen-xl m-auto  sm:px-4 md:px-1 px-4  flex sm:flex-row flex-col gap-8 sm:gap-0 justify-between border-b border-zinc-200">
-      <NavLink to="/">
-      <img
-          className="sm:h-28 h-24 sm:w-28 w-24"
-          src="https://www.sync-power.com/jpg/logo-construction2.png"
-          alt=""
-        />
+        <NavLink to="/">
+          <img
+            className="sm:h-28 h-24 sm:w-28 w-24"
+            src="https://www.sync-power.com/jpg/logo-construction2.png"
+            alt=""
+          />
         </NavLink>
         <div className="navigation w-[20%] ">
           <h1 className="text-thin text-xl sm:text-2xl font-['open_sans'] text-zinc-700 mb-8">
@@ -58,7 +58,7 @@ const Footer = () => {
                 {
                   text: "Contact",
                   path: "/contact",
-                }
+                },
               ].map((item, index) => (
                 <NavLink
                   to={item.path}
@@ -113,7 +113,14 @@ const Footer = () => {
             <div className=" flex items-center gap-3">
               <MdOutlineMail />
               <h6 className="text-xs font-['open_sans'] text-thin text-zinc-800 hover:text-orange-400">
-                sales@sync-power.com
+                <a
+                onClick= {e => e.preventDefault()}
+                  href="mailto: contact@sync-power.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  sales@sync-power.com
+                </a>
               </h6>
             </div>
           </div>
