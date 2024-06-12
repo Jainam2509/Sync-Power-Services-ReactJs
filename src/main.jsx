@@ -6,6 +6,7 @@ import Product from "./Pages/Product";
 import Services from "./Pages/Services";
 import Contact from "./Pages/Contact";
 import Solution from "./Pages/Solution";
+import Login from "./Pages/Login";
 import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import App from "./App";
@@ -15,6 +16,7 @@ import Ups from "./Components/Services/Ups";
 import SwitchGear from "./Components/Services/SwitchGear";
 import CircuitBreaker from "./Components/Services/CircuitBreaker";
 import ServicesMain from "./Components/Services/ServicesMain";
+import SignUp from "./Pages/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/signup",
+        element: <SignUp />,
       },
       {
         path: "/",

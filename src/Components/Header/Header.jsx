@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
   return (
     <header className="w-full font-['open_sans'] z-20  bg-zinc-100 fixed">
       <div className="max-w-screen-xl m-auto  sm:px-4 md:px-1 py-2 px-5 md:flex justify-between">
@@ -73,7 +74,9 @@ const Header = () => {
             </NavLink>
           ))}
           <div className="text-center pb-2 md:mb-0 md:text-left">
-            <button className=" md:ml-5 md:px-6 md:py-2 px-3 py-1 w-max h-min font-['open_sans'] text-white bg-orange-400 rounded hover:bg-white border border-orange-500 hover:text-orange-500">
+            <button
+            onClick={() => navigate("/login")}
+            className=" md:ml-5 md:px-6 md:py-2 px-3 py-1 w-max h-min font-['open_sans'] text-white bg-orange-400 rounded hover:bg-white border border-orange-500 hover:text-orange-500">
               Login / Sign Up
             </button>
           </div>

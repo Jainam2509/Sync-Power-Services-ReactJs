@@ -4,6 +4,7 @@ import HomeServices from "../Components/Home/HomeServices";
 import Who from "../Components/Home/Who";
 import Partners from "../Components/utils/Partners";
 
+
 const Home = () => {
   const imagesURL = [
     {
